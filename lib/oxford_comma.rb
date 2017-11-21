@@ -1,6 +1,14 @@
 def oxford_comma(array)
-  y = array.pop
-  x = "and #{y}"
-  array.push(x)
-  array.join(", ")
+  if array.size > 2
+    y = array.pop
+    x = "and #{y}"
+    array.push(x)
+    array.join(", ")
+  elsif array.size == 2
+    y = array.pop
+    x = "and #{y}"
+    array.push(x)
+    array.join(" ")
+  else
+    array
 end
